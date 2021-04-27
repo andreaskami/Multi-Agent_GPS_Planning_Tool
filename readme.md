@@ -1,5 +1,6 @@
 # GPS-based robot path planning tool
 A master thesis graduation project, by Jochem Postmes
+
 To do: cite conference paper
 
 ## Installing the tool
