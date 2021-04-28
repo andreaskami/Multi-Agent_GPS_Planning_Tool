@@ -1,7 +1,11 @@
 # GPS-based robot path planning tool
 A master thesis graduation project, by Jochem Postmes
 
-To do: cite conference paper
+This tool allows its user to load a topology based on GPS coordinates, and use one of several algorithms to find a path planning solution for a swarm of agents.
+
+![System Pipeline](images/pipeline_gui.png)
+
+*To do: cite conference paper*
 
 ## Installing the tool
 Make sure you are using Python 3.8 or higher. Install all dependencies with 
@@ -21,7 +25,8 @@ Run the tool with
 ```
 python main.py
 ```
-Insert picture of GUI
+
+![GUI screenshot](images/gui.png)
 
 ## Using the tool
 Press `Exit` to exit the tool.
@@ -64,3 +69,5 @@ Under **Output settings**, the algorithm used to create a solution can be select
 If `Render output` is unchecked, the environment and output solution will not be rendered.
 
 If all settings are as they should be, press `Create solution` to generate a solution to the loaded environment for the specified number of agents.
+
+![kml input](images/b_kml.png)  ![path planning scenario](images/bgrid40.png)    ![GPS paths output](images/b_cw_ge_out.png)
