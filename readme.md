@@ -26,7 +26,7 @@ Run the tool with
 python main.py
 ```
 
-![GUI screenshot](images/gui.png)
+![GUI screenshot](images/gui.PNG)
 
 ## Using the tool
 Press `Exit` to exit the tool.
@@ -70,4 +70,4 @@ If `Render output` is unchecked, the environment and output solution will not be
 
 If all settings are as they should be, press `Create solution` to generate a solution to the loaded environment for the specified number of agents.
 
-![kml input](images/b_kml.png)  ![path planning scenario](images/bgrid40.png)    ![GPS paths output](images/b_cw_ge_out.png)
+![kml input](images/b_kml.PNG)  ![path planning scenario](images/bgrid40.png)    ![GPS paths output](images/b_cw_ge_out.PNG)
