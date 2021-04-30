@@ -7,6 +7,8 @@ This tool allows its user to load a topology based on GPS coordinates, and use o
 
 *To do: cite conference paper*
 
+Follow [this link](https://superworld.cyens.org.cy/projects/robotswarms/environments.pdf) to view the scenarios from the paper and other images of the tool in action.
+
 ## Installing the tool
 Make sure you are using Python 3.8 or higher. Install all dependencies with 
 ```
@@ -69,14 +71,3 @@ Under **Output settings**, the algorithm used to create a solution can be select
 If `Render output` is unchecked, the environment and output solution will not be rendered.
 
 If all settings are as they should be, press `Create solution` to generate a solution to the loaded environment for the specified number of agents.
-
-
-### Explanatory images
-
-Below a few images describe the working of the system: a marked topology in Google Earth, a scenario inside the simulation environment, and the output path in GPS coordinates, rendered in Google Earth.
-
-![kml input](images/b_kml.PNG)  
-
-![path planning scenario](images/bgrid40.png)    
-
-![GPS paths output](images/b_cw_ge_out.PNG)
