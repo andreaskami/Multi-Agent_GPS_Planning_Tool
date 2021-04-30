@@ -23,7 +23,7 @@ class WorldHandler:
 
     Used by the GUI.
     """
-    def __init__(self, vrp_solver=None):
+    def __init__(self, vrp_solver=None, output_path='.'):
         if vrp_solver is None:
             self.solver = VRPSolver(None, None)
         else:
@@ -34,7 +34,7 @@ class WorldHandler:
         self.world = None
         self.env = None
 
-        self.output_path = '.'
+        self.output_path = output_path
         self.default_flags = flag_defaults
 
     def create_environment(self, preloaded, filepath, render, **flags):

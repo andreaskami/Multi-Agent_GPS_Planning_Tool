@@ -7,6 +7,7 @@ from utility.file_io import read_csv_solution, get_top_dir_name
 import os
 
 
+# TODO supress console output for popcorn
 def popcorn_cpp(env, scenario, step_size=None, clear_output=True, view=False, plot=False, **kwargs):
     """
     Performs coverage path planning based on Satifyability Modulo Theory (SMT).

@@ -98,7 +98,7 @@ def _transform_output(tensor_indices, vrp):
 
 def _get_closest_model(n_nodes):
     """Find the closest model for the current problem size from the available models in ./VRP/DRL_VRP/models/"""
-    model_folder = os.path.join(get_project_root(), 'VRP', 'DRL_VRP', 'models')
+    model_folder = os.path.join(get_project_root(), 'algorithms', 'DRL_VRP', 'models')
     model_dirnames = [name for name in os.listdir(model_folder) if os.path.isdir(os.path.join(model_folder, name))]
     models = [int(s.strip('vrp')) for s in model_dirnames]  # get list of integers that represent the available models
     closest = models[0]

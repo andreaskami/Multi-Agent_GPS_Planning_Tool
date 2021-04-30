@@ -19,9 +19,9 @@ default_env_name = 'a'
 class GUI:
     """Graphical User Interface for the path planning and target assignment tool. Designed using Tkinter."""
     def __init__(self, vrp_solver=None):
-        self.kml_dataset_path = os.path.join(get_project_root(), 'top_dataset', 'kml')
-        self.dict_path = os.path.join(get_project_root(), 'top_dataset', 'dict')
-        self.input_path = os.path.join(self.kml_dataset_path, 'dataset', 'a.kml')
+        self.kml_dataset_path = os.path.join(get_project_root(), 'database', 'kml')
+        self.dict_path = os.path.join(get_project_root(), 'database', 'class_objects')
+        self.input_path = os.path.join(self.kml_dataset_path, 'a.kml')
         self.output_path = os.path.join(get_project_root(), 'output')
         self.input_options = {'just_planning': True}
         self.output_options = {}
@@ -29,7 +29,7 @@ class GUI:
         self.preloaded = False
         self.vars = {}
 
-        self.world_handler = WorldHandler(vrp_solver)
+        self.world_handler = WorldHandler(vrp_solver, self.output_path)
         self.algs = dict((n, t) for t, n in self.world_handler.solver.names.items())
 
         # WINDOW ------------------------------------------------------------
@@ -333,13 +333,13 @@ class GUI:
         else:
             self.log_line('Creating solution for ' + alg + '...')
 
-        try:
-            self.world_handler.apply_algorithm(alg, self.output_options['store_im'].get(),
-                                               self.output_options['store_kml'].get(),
-                                               self.output_options['store_gps'].get())
-            self.log_line('Solution found.')
-        except Exception as e:
-            self.log_line('Error! ' + str(e))
+            try:
+                self.world_handler.apply_algorithm(alg, self.output_options['store_im'].get(),
+                                                   self.output_options['store_kml'].get(),
+                                                   self.output_options['store_gps'].get())
+                self.log_line('Solution found.')
+            except Exception as e:
+                self.log_line('Error! ' + str(e))
 
     @staticmethod
     def get_value(field):

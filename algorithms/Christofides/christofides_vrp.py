@@ -1,4 +1,4 @@
-from VRP.Christofides.christofides import ChristofidesApprox
+from algorithms.Christofides.christofides import ChristofidesApprox
 import numpy as np
 
 
